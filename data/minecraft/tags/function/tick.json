@@ -1,0 +1,6 @@
+{
+    "values": [
+        "thescarengine:internal/tick",
+        "custom_blocks:tick"
+    ]
+}

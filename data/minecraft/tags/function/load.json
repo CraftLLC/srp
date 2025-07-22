@@ -1,5 +1,6 @@
 {
     "values": [
-        "thescarengine:internal/load"
+        "thescarengine:internal/load",
+        "custom_blocks:load"
     ]
 }

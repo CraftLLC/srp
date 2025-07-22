@@ -1,9 +1,9 @@
-# Clean up entities marked for removal (these are already confirmed to be broken)
+# Очистити сутності позначені для видалення (вони вже підтверджено зламані)
 minecraft:kill @e[type=item_display,tag=custom_blocks.to_remove]
 
-# ONLY clean up orphaned item_display entities for super blocks that don't have their base block
-# This is safe because if the red_stained_glass is missing, the block was definitely broken
+# ТІЛЬКИ очищувати сирітські item_display сутності супер блоків, які не мають базового блоку
+# Це безпечно, бо якщо червоного скла немає, то блок точно був зламаний
 minecraft:execute as @e[type=item_display,tag=custom_blocks.super_block] at @s unless block ~ ~ ~ red_stained_glass run minecraft:kill @s
 
-# Display cleanup message
-minecraft:tellraw @a[tag=debug] {"text":"Custom blocks cleanup completed - removed orphaned entities only","color":"green"}
+# Показати повідомлення про очищення
+minecraft:tellraw @a[tag=debug] {"text":"Очищення кастомних блоків завершено - видалено тільки сирітські сутності","color":"green"}

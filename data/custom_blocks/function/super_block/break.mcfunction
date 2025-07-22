@@ -1,8 +1,8 @@
-# Spawn the loot for the custom block
+# Створити дроп для кастомного блоку
 loot spawn ~ ~ ~ loot custom_blocks:super_block
 
-# Remove any red stained glass items that might have been dropped when the block was broken
+# Видалити предмети червоного скла, які могли випасти при ламанні блоку
 minecraft:execute as @e[type=item,sort=nearest,distance=..3,nbt={Item:{id:"minecraft:red_stained_glass"}}] run minecraft:kill @s
 
-# Remove all item_display entities with super_block tags at this location (including this one and any duplicates)
+# Видалити всі item_display сутності з тегами супер блоку в цій локації (включаючи цю та дублікати)
 minecraft:execute positioned ~ ~ ~ run minecraft:kill @e[type=item_display,tag=custom_blocks.super_block,distance=..1]

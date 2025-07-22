@@ -1,5 +1,5 @@
-# Initialize scoreboards for custom blocks system
-minecraft:scoreboard objectives add custom_blocks dummy "Custom Blocks System"
+# Ініціалізувати scoreboards для системи кастомних блоків
+minecraft:scoreboard objectives add custom_blocks dummy "Система кастомних блоків"
 
-# Display load message
-minecraft:tellraw @a {"text":"Custom Blocks datapack loaded successfully!","color":"green"}
+# Показати повідомлення про завантаження
+minecraft:tellraw @a {"text":"Датапак кастомних блоків успішно завантажено!","color":"green"}

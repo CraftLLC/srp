@@ -1,22 +1,22 @@
-# Test function for custom blocks system
-# This function helps verify that the system is working correctly
+# Тестова функція для системи кастомних блоків
+# Ця функція допомагає перевірити, що система працює правильно
 
-# Give the player some custom block items for testing
+# Дати гравцю предмети кастомних блоків для тестування
 function custom_blocks:give_items
 
-# Display system status
-minecraft:tellraw @s {"text":"=== Custom Blocks System Status ===","color":"gold"}
+# Показати статус системи
+minecraft:tellraw @s {"text":"=== Статус системи кастомних блоків ===","color":"gold"}
 
-# Count current custom block entities
+# Підрахувати поточні сутності кастомних блоків
 minecraft:execute store result score #total_blocks custom_blocks run execute if entity @e[type=item_display,tag=custom_blocks.custom_block]
 minecraft:execute store result score #super_blocks custom_blocks run execute if entity @e[type=item_display,tag=custom_blocks.super_block]
 
-minecraft:tellraw @s [{"text":"Total custom blocks: ","color":"green"},{"score":{"name":"#total_blocks","objective":"custom_blocks"},"color":"yellow"}]
-minecraft:tellraw @s [{"text":"Super blocks: ","color":"green"},{"score":{"name":"#super_blocks","objective":"custom_blocks"},"color":"yellow"}]
+minecraft:tellraw @s [{"text":"Всього кастомних блоків: ","color":"green"},{"score":{"name":"#total_blocks","objective":"custom_blocks"},"color":"yellow"}]
+minecraft:tellraw @s [{"text":"Супер блоків: ","color":"green"},{"score":{"name":"#super_blocks","objective":"custom_blocks"},"color":"yellow"}]
 
-minecraft:tellraw @s {"text":"=== Instructions ===","color":"gold"}
-minecraft:tellraw @s {"text":"1. Place the item frame on a block","color":"white"}
-minecraft:tellraw @s {"text":"2. It will convert to a custom block","color":"white"}
-minecraft:tellraw @s {"text":"3. Break the red glass to test cleanup","color":"white"}
-minecraft:tellraw @s {"text":"4. Use '/function custom_blocks:manual_cleanup' if needed","color":"white"}
-minecraft:tellraw @s {"text":"5. Cleanup only happens when blocks are actually broken","color":"yellow"}
+minecraft:tellraw @s {"text":"=== Інструкції ===","color":"gold"}
+minecraft:tellraw @s {"text":"1. Розмістіть item frame на блоці","color":"white"}
+minecraft:tellraw @s {"text":"2. Він перетвориться на кастомний блок","color":"white"}
+minecraft:tellraw @s {"text":"3. Зламайте червоне скло для тестування очищення","color":"white"}
+minecraft:tellraw @s {"text":"4. Використовуйте '/function custom_blocks:manual_cleanup' якщо потрібно","color":"white"}
+minecraft:tellraw @s {"text":"5. Очищення відбувається тільки коли блоки дійсно зламані","color":"yellow"}

@@ -1,5 +1,5 @@
-# Check if this is a super block and place it
+# Перевірити чи це супер блок і розмістити його
 minecraft:execute as @s[tag=custom_blocks.super_block] run function custom_blocks:super_block/place
 
-# Remove the item frame entity after placing the custom block
+# Видалити сутність item frame після розміщення кастомного блоку
 minecraft:kill @s

@@ -1,18 +1,18 @@
-# Manual cleanup function for custom blocks
-# This can be called by players or admins to force cleanup of orphaned entities
+# Функція ручного очищення для кастомних блоків
+# Може викликатися гравцями або адміністраторами для примусового очищення сирітських сутностей
 
-# Count entities before cleanup
+# Підрахувати сутності до очищення
 minecraft:execute store result score #before_count custom_blocks run execute if entity @e[type=item_display,tag=custom_blocks.custom_block]
 
-# Run the cleanup
+# Запустити очищення
 function custom_blocks:cleanup_orphaned
 
-# Count entities after cleanup
+# Підрахувати сутності після очищення
 minecraft:execute store result score #after_count custom_blocks run execute if entity @e[type=item_display,tag=custom_blocks.custom_block]
 
-# Calculate difference
+# Обчислити різницю
 minecraft:scoreboard players operation #cleaned_count custom_blocks = #before_count custom_blocks
 minecraft:scoreboard players operation #cleaned_count custom_blocks -= #after_count custom_blocks
 
-# Display results
-minecraft:tellraw @s [{"text":"Custom blocks cleanup completed. Removed ","color":"green"},{"score":{"name":"#cleaned_count","objective":"custom_blocks"},"color":"yellow"},{"text":" orphaned entities.","color":"green"}]
+# Показати результати
+minecraft:tellraw @s [{"text":"Очищення кастомних блоків завершено. Видалено ","color":"green"},{"score":{"name":"#cleaned_count","objective":"custom_blocks"},"color":"yellow"},{"text":" сирітських сутностей.","color":"green"}]

@@ -4,6 +4,7 @@ execute store result score .rule.tce_disable_confirmation datapack.temp.thecaren
 execute store result score .rule.use_dynamic_collision_check datapack.temp.thecarengine.main run data get storage thescarengine:temp p.rules.use_dynamic_collision_check
 execute store result score .rule.player_rotate_with_vehicle datapack.temp.thecarengine.main run data get storage thescarengine:temp p.rules.player_rotate_with_vehicle
 execute store result score .rule.collision_collide_collision datapack.temp.thecarengine.main run data get storage thescarengine:temp p.rules.collision_collide_collision
+execute store result score .rule.show_custom_blocks_actionbar datapack.temp.thecarengine.main run data get storage thescarengine:temp p.rules.show_custom_blocks_actionbar
 execute store result score .rule.unload_vehicle_after_ticks datapack.temp.thecarengine.main run data get storage thescarengine:temp p.rules.unload_vehicle_after_ticks
 
 #thing

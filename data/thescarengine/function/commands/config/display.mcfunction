@@ -18,6 +18,9 @@ function thescarengine:commands/config/macro_bool_rules with storage thescarengi
 data modify storage thescarengine:temp data.config.in.booltype set value {id:"collision_collide_collision",display:"  collisionCollideCollision       ",info:"[experimental, buggy, laggy] If true, collision acts like soild block to other collision."}
 function thescarengine:commands/config/macro_bool_rules with storage thescarengine:temp data.config.in.booltype
 
+data modify storage thescarengine:temp data.config.in.booltype set value {id:"show_custom_blocks_actionbar",display:"  showCustomBlocksActionbar   ",info:"If true, shows the count of custom blocks in the actionbar."}
+function thescarengine:commands/config/macro_bool_rules with storage thescarengine:temp data.config.in.booltype
+
 data modify storage thescarengine:temp data.config.in.input set value {id:"kill_near_distance",display:"  killNearDistance                ",info:"Distance of /function tce:kill/near (blocks)"}
 function thescarengine:commands/config/macro_input_rules with storage thescarengine:temp data.config.in.input
 

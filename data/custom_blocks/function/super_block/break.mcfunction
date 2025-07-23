@@ -1,5 +1,5 @@
-# Створити дроп для кастомного блоку
-loot spawn ~ ~ ~ loot custom_blocks:super_block
+# Створити дроп для кастомного блоку тільки якщо гравець не в креативі
+execute unless entity @a[gamemode=creative,distance=..10] run loot spawn ~ ~ ~ loot custom_blocks:super_block
 
 # Видалити предмети червоного скла, які могли випасти при ламанні блоку
 minecraft:execute as @e[type=item,sort=nearest,distance=..3,nbt={Item:{id:"minecraft:red_stained_glass"}}] run minecraft:kill @s

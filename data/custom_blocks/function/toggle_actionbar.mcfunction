@@ -16,6 +16,3 @@ minecraft:execute if score #actionbar_enabled custom_blocks matches 0 run tellra
 
 # Очистити actionbar якщо вимкнено
 minecraft:execute if score #actionbar_enabled custom_blocks matches 0 run title @s actionbar ""
-
-# Скинути advancement для повторного використання
-minecraft:advancement revoke @s only custom_blocks:toggle_actionbar
